@@ -1,5 +1,9 @@
-# Make the cache dir early as we need it in the scripts
-mkdir -p $CACHE_DIR
+# Make the .heroku dir early as we need it in the scripts
+set +e
+# Create set-aside `.heroku` folder.
+mkdir .heroku &> /dev/null
+set -e
+
 
 # GeoDjango support.
 # see [`bin/steps/geodjango`](geodjango.html).
