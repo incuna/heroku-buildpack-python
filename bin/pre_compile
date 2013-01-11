@@ -1,3 +1,6 @@
+# Make the cache dir early as we need it in the scripts
+mkdir -p $CACHE_DIR
+
 # GeoDjango support.
 # see [`bin/steps/geodjango`](geodjango.html).
 source $BIN_DIR/steps/geodjango
